@@ -1,1 +1,1 @@
-# 50-design-challenges
+# basic-template
