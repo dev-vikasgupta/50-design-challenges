@@ -14,26 +14,27 @@ body {
 /* Book Shelf Start */
 .book-shelf {
   display: flex;
-  width: 100vw;
+  width: 95vw;
   font-family: Mulish, sans-serif;
   margin: 0;
   align-items: center;
   justify-content: center;
 }
 .book-shelf .panel:first-child {
-  background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-image: url('./img/1.jpg');
 }
 .book-shelf .panel:nth-child(2) {
-  background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-color: #f4c430;
+  color: #000;
 }
 .book-shelf .panel:nth-child(3) {
-  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
+  background-color: #d8dcd6;
 }
 .book-shelf .panel:nth-child(4) {
-  background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+  background-color: #36454f;
 }
 .book-shelf .panel:nth-child(5) {
-  background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-color: #40e0d0;
 }
 .book-shelf .panel {
   background-size: auto 100%;
@@ -47,27 +48,41 @@ body {
   margin: 1%;
   position: relative;
   transition: flex 0.7s ease-in;
+  transform: rotate(10deg);
 }
-.book-shelf > .panel h3 {
+.book-shelf > .panel p {
   font-size: x-large;
   position: absolute;
   text-align: center;
-  left: 20%;
-  bottom: 5%;
+  left: 35%;
+  bottom: 20%;
   margin: 0;
-  opacity: 0;
+  opacity: 1;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: bold;
 }
 .book-shelf > .panel.active {
   flex: 5;
+  transform: rotate(0deg);
 }
-.book-shelf > .panel.active h3 {
-  opacity: 1;
+.book-shelf > .panel.active p {
+  opacity: 0;
   transition: opacity 0.3s ease-in 0.5s;
 }
 @media (max-width: 480px) {
   .book-shelf .panel:nth-child(4),
   .book-shelf .panel:nth-child(5) {
     display: none;
+  }
+  .book-shelf .panel {
+    background-size: auto 90vw;
+    transform: rotate(0deg);
+  }
+  .book-shelf > .panel p {
+    left: 1vw;
+    bottom: 20vh;
+    font-size: large;
   }
 }
 /* Book Shelf Ends */
