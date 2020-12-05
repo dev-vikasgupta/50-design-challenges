@@ -57,7 +57,6 @@ body {
   left: 35%;
   bottom: 20%;
   margin: 0;
-  opacity: 1;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-weight: bold;
@@ -67,7 +66,7 @@ body {
   transform: rotate(0deg);
 }
 .book-shelf > .panel.active p {
-  opacity: 0;
+  display: none;
   transition: opacity 0.3s ease-in 0.5s;
 }
 @media (max-width: 480px) {
