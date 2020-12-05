@@ -10,9 +10,9 @@ function initBookShelf() {
       setTimeout(() => {
         switchColorWithImages(panels)
         panel.style.backgroundColor = 'transparent'
-        panel.style.transition = 'background .7s linear'
+        panel.style.transition = 'background .7s ease-in'
         panel.style.backgroundImage = image
-      }, 700)
+      }, 500)
     })
   })
 }
