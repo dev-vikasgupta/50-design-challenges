@@ -6,14 +6,22 @@ function initBookShelf() {
       panel.classList.add('active')
       const position = index + 1
       const image = getImageUrl(position)
-      panel.style.backgroundColor = 'transparent'
-      panel.style.backgroundImage = image
+
+      setTimeout(() => {
+        switchColorWithImages(panels)
+        panel.style.backgroundColor = 'transparent'
+        panel.style.backgroundImage = image
+      }, 700)
     })
   })
 }
 function deactivateBooks(panels) {
   panels.forEach((panel, index) => {
     panel.classList.remove('active')
+  })
+}
+function switchColorWithImages(panels) {
+  panels.forEach((panel, index) => {
     panel.style.backgroundImage = 'none'
     panel.style.backgroundColor = setBackgroundColor(index)
   })
